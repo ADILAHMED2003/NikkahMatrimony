@@ -15,7 +15,7 @@ const HowItWorks = () => {
           <div className="how-it-works-header">
             <h1 className="how-it-works-title">How niqah works</h1>
             <p className="how-it-works-subtitle">
-              A very easy 4 step process to find your partner.
+              An easy Four step process to find your partner.
             </p>
           </div>
 
