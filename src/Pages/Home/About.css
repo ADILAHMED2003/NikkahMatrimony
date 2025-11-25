@@ -1,0 +1,500 @@
+/* About.css */
+.about-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.about-hero-section {
+    background: linear-gradient(180deg, #FAFAFA 0%, #FFFFFF 100%);
+    padding: 4rem 2rem 6rem;
+    flex: 1;
+}
+
+.about-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.about-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #7C3AED 0%, #EC4899 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.about-subtitle {
+    font-size: 1.25rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Cards Grid */
+.about-content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 6rem;
+}
+
+.about-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.about-card-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #7C3AED 0%, #EC4899 100%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: white;
+    flex-shrink: 0;
+}
+
+.about-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.about-card-text {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.7;
+    flex: 1;
+}
+
+/* Story Section */
+.about-story-section {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 6rem;
+    padding: 3rem;
+    background: linear-gradient(135deg, #FFF5F5 0%, #FAFAFA 100%);
+    border-radius: 30px;
+}
+
+.about-story-content {
+    padding-right: 1rem;
+}
+
+.about-story-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+    line-height: 1.3;
+}
+
+.about-story-text {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.about-story-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.story-image-placeholder {
+    animation: float 4s ease-in-out infinite;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Values Section */
+.about-values-section {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.about-values-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 3rem;
+}
+
+.about-values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.value-item {
+    padding: 2rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+}
+
+.value-number {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #7C3AED 0%, #EC4899 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.value-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.value-text {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Animations */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
+
+/* Responsive Design - 1024px (Tablet Landscape) */
+@media (max-width: 1024px) {
+    .about-hero-section {
+        padding: 3rem 1.5rem 5rem;
+    }
+
+    .about-title {
+        font-size: 3rem;
+    }
+
+    .about-subtitle {
+        font-size: 1.15rem;
+        max-width: 500px;
+    }
+
+    .about-content-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.75rem;
+        margin-bottom: 5rem;
+    }
+
+    .about-card {
+        padding: 2rem;
+    }
+
+    .about-card-icon {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 1.25rem;
+    }
+
+    .about-card-title {
+        font-size: 1.35rem;
+    }
+
+    .about-story-section {
+        gap: 3rem;
+        padding: 2.5rem;
+        margin-bottom: 5rem;
+    }
+
+    .about-story-title {
+        font-size: 2.25rem;
+    }
+
+    .about-story-text {
+        font-size: 1.05rem;
+    }
+
+    .about-values-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.75rem;
+    }
+
+    .about-values-title {
+        font-size: 2.25rem;
+    }
+}
+
+/* Responsive Design - 768px (Tablet Portrait) */
+@media (max-width: 768px) {
+    .about-hero-section {
+        padding: 2.5rem 1rem 4rem;
+    }
+
+    .about-header {
+        margin-bottom: 3rem;
+    }
+
+    .about-title {
+        font-size: 2.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .about-subtitle {
+        font-size: 1.1rem;
+        max-width: 400px;
+        padding: 0 1rem;
+    }
+
+    .about-content-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 4rem;
+    }
+
+    .about-card {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .about-card-icon {
+        margin: 0 auto 1.25rem;
+        width: 65px;
+        height: 65px;
+    }
+
+    .about-card-title {
+        font-size: 1.3rem;
+    }
+
+    .about-card-text {
+        font-size: 0.95rem;
+    }
+
+    .about-story-section {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        padding: 2rem;
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+
+    .about-story-content {
+        padding-right: 0;
+        order: 2;
+    }
+
+    .about-story-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .about-story-text {
+        font-size: 1rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .about-story-image {
+        order: 1;
+    }
+
+    .about-values-section {
+        margin-bottom: 3rem;
+    }
+
+    .about-values-title {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .about-values-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .value-item {
+        padding: 1.75rem;
+    }
+
+    .value-number {
+        font-size: 2.5rem;
+    }
+
+    .value-title {
+        font-size: 1.2rem;
+    }
+}
+
+/* Responsive Design - 480px (Mobile) */
+@media (max-width: 480px) {
+    .about-hero-section {
+        padding: 2rem 0.75rem 3rem;
+    }
+
+    .about-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .about-title {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .about-subtitle {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+        line-height: 1.5;
+    }
+
+    .about-content-grid {
+        gap: 1.25rem;
+        margin-bottom: 3rem;
+    }
+
+    .about-card {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+
+    .about-card-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 16px;
+        margin-bottom: 1rem;
+    }
+
+    .about-card-title {
+        font-size: 1.2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .about-card-text {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .about-story-section {
+        padding: 1.5rem;
+        border-radius: 20px;
+        margin-bottom: 3rem;
+        gap: 2rem;
+    }
+
+    .about-story-title {
+        font-size: 1.75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .about-story-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+
+    .about-values-title {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .about-values-grid {
+        gap: 1.25rem;
+    }
+
+    .value-item {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+
+    .value-number {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .value-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .value-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
+
+/* Extra Small Devices (320px and below) */
+@media (max-width: 320px) {
+    .about-hero-section {
+        padding: 1.5rem 0.5rem 2.5rem;
+    }
+
+    .about-title {
+        font-size: 1.75rem;
+    }
+
+    .about-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .about-card {
+        padding: 1.25rem;
+    }
+
+    .about-card-icon {
+        width: 55px;
+        height: 55px;
+    }
+
+    .about-story-section {
+        padding: 1.25rem;
+    }
+
+    .value-item {
+        padding: 1.25rem;
+    }
+}
+
+/* Large Desktop (1400px and above) */
+@media (min-width: 1400px) {
+    .about-container {
+        max-width: 1400px;
+    }
+}

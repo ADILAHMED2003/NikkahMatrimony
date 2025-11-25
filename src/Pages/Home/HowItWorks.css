@@ -1,0 +1,512 @@
+/* HowItWorks.css */
+.how-it-works-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.how-it-works-section {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F9FAFB 100%);
+  padding: 4rem 2rem 6rem;
+  flex: 1;
+}
+
+.how-it-works-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.how-it-works-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.how-it-works-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.how-it-works-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Steps Container */
+.steps-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  padding: 2rem;
+}
+
+/* Central Illustration */
+.central-illustration {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.couple-illustration {
+  animation: float 4s ease-in-out infinite;
+}
+
+.couple-svg {
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Step Cards */
+.step-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.step-1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.step-2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.step-3 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.step-4 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.step-badge {
+  position: absolute;
+  top: -15px;
+  left: 2rem;
+  background: linear-gradient(135deg, #7C3AED 0%, #EC4899 100%);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+}
+
+.step-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #F3E8FF 0%, #FCE7F3 100%);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: #7C3AED;
+}
+
+.step-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.step-description {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* Additional Info Section */
+.additional-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.info-card {
+  background: linear-gradient(135deg, #F9FAFB 0%, #FFFFFF 100%);
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  border: 2px solid #F3F4F6;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  border-color: #7C3AED;
+}
+
+.info-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #7C3AED 0%, #EC4899 100%);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: white;
+}
+
+.info-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.75rem;
+}
+
+.info-text {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+
+/* Tablet Landscape - 1024px */
+@media (max-width: 1024px) {
+  .how-it-works-section {
+    padding: 3rem 1.5rem 5rem;
+  }
+
+  .how-it-works-title {
+    font-size: 2.5rem;
+  }
+
+  .how-it-works-subtitle {
+    font-size: 1rem;
+  }
+
+  .steps-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    padding: 1.5rem;
+  }
+
+  .central-illustration {
+    display: none;
+  }
+
+  .couple-svg {
+    width: 300px;
+    height: 300px;
+  }
+
+  .step-card {
+    padding: 1.75rem;
+  }
+
+  .step-title {
+    font-size: 1.35rem;
+  }
+
+  .step-description {
+    font-size: 0.95rem;
+  }
+
+  .additional-info {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .info-card {
+    padding: 1.5rem;
+  }
+
+  .info-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .info-title {
+    font-size: 1.15rem;
+  }
+
+  .info-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet Portrait - 768px */
+@media (max-width: 768px) {
+  .how-it-works-section {
+    padding: 2.5rem 1rem 4rem;
+  }
+
+  .how-it-works-header {
+    margin-bottom: 3rem;
+  }
+
+  .how-it-works-title {
+    font-size: 2rem;
+  }
+
+  .how-it-works-subtitle {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+
+  .steps-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .step-1, .step-2, .step-3, .step-4 {
+    grid-column: 1;
+  }
+
+  .step-1 {
+    grid-row: 1;
+  }
+
+  .step-2 {
+    grid-row: 2;
+  }
+
+  .step-3 {
+    grid-row: 3;
+  }
+
+  .step-4 {
+    grid-row: 4;
+  }
+
+  .central-illustration {
+    display: none;
+  }
+
+  .step-card {
+    padding: 1.5rem;
+  }
+
+  .step-badge {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+    left: 1.5rem;
+  }
+
+  .step-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .step-icon svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .step-title {
+    font-size: 1.25rem;
+  }
+
+  .step-description {
+    font-size: 0.9rem;
+  }
+
+  .additional-info {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .info-card {
+    padding: 1.75rem;
+  }
+
+  .info-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .info-icon svg {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Mobile - 480px */
+@media (max-width: 480px) {
+  .how-it-works-section {
+    padding: 2rem 1rem 3rem;
+  }
+
+  .how-it-works-header {
+    margin-bottom: 2rem;
+  }
+
+  .how-it-works-title {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+
+  .how-it-works-subtitle {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+
+  .steps-container {
+    gap: 1.5rem;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .step-card {
+    padding: 1.25rem;
+    border-radius: 15px;
+  }
+
+  .step-badge {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    left: 1rem;
+    top: -12px;
+  }
+
+  .step-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+
+  .step-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .step-title {
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .step-description {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  .additional-info {
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+
+  .info-card {
+    padding: 1.5rem 1rem;
+    border-radius: 15px;
+  }
+
+  .info-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+  }
+
+  .info-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .info-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .info-text {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+}
+
+/* Extra Small Mobile - 375px and below */
+@media (max-width: 375px) {
+  .how-it-works-title {
+    font-size: 1.5rem;
+  }
+
+  .step-card {
+    padding: 1rem;
+  }
+
+  .step-badge {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+
+  .step-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .step-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .step-title {
+    font-size: 1.05rem;
+  }
+
+  .step-description {
+    font-size: 0.85rem;
+  }
+
+  .info-card {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .info-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .info-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .info-title {
+    font-size: 1rem;
+  }
+
+  .info-text {
+    font-size: 0.825rem;
+  }
+}

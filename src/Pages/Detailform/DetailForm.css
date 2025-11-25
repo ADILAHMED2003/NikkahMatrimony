@@ -1,0 +1,735 @@
+/* NikahForm.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+.detailParent {
+    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+    /* background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); */
+    /* background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%); */
+    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+    /* background: linear-gradient(135deg, #f9c5d1 0%, #ffe6eb 100%); */
+    /* background: linear-gradient(135deg, #fcbad3 0%, #ffdde1 100%); */
+    /* background: linear-gradient(135deg, #fbd3e9 0%, #bb377d 100%); */
+    /* background: linear-gradient(135deg, #f6d1d1 0%, #ffe9e3 100%); */
+    /* background: linear-gradient(135deg, #f9c5d1 0%, #ffe6eb 100%); */
+    /* background: linear-gradient(135deg, rgb(219, 153, 153) 0%, rgb(239, 104, 104) 100%); */
+    background: linear-gradient(135deg, #e681bc 0%, #e592be 50%, #dc3a85 100%);
+
+    max-width: 100%;
+}
+
+.nikah-form-container {
+    max-width: 1200px;
+    /* max-width: 100%; */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: rgb(8, 8, 8);
+}
+
+.form-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.form-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.nikah-form {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.form-section {
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 30px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    /* border-bottom: 2px solid #667eea; */
+    border-bottom: 2px solid rgb(255, 0, 153);
+
+
+}
+
+.section-icon {
+    font-size: 2rem;
+    margin-right: 15px;
+}
+
+.section-header h2 {
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px 16px;
+    border: 2px solid #e1e5e9;
+    border-radius: 10px;
+    color: #333;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.form-group select {
+
+    color: #555;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+    font-family: inherit;
+}
+
+.file-upload {
+    position: relative;
+    border: 2px dashed #e1e5e9;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #fafbfc;
+    overflow: hidden;
+}
+
+.file-upload:hover {
+    border-color: #667eea;
+    background: #f8f9ff;
+}
+
+.file-upload input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.upload-placeholder {
+    pointer-events: none;
+}
+
+/* Upload icon styling */
+/* .upload-icon span {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 15px;
+} */
+.upload-icon svg {
+    display: block;
+    margin: 0 auto 10px;
+    color: #000000;
+
+}
+
+
+.upload-text {
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.upload-hint {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Image preview styling */
+.image-preview {
+    position: relative;
+    display: inline-block;
+    max-width: 200px;
+    max-height: 150px;
+}
+
+.image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e1e5e9;
+}
+
+.preview-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.7); */
+    background: rgba(255, 255, 255, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
+}
+
+/* .preview-overlay span {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+} */
+.preview-overlay svg {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 8px;
+}
+
+.preview-overlay p {
+    color: white;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.image-preview:hover .preview-overlay {
+    opacity: 1;
+}
+
+/* .range-inputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap; 
+} */
+
+.range-inputs input[type="number"] {
+    width: 80px;
+    /* smaller input box */
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    text-align: center;
+}
+
+
+
+.range-inputs input {
+    flex: 1;
+}
+
+.range-inputs span {
+    color: #666;
+    font-weight: 500;
+    margin: 0px 12px;
+
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.submit-btn,
+.cancel-btn {
+    padding: 15px 40px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, rgb(242, 125, 189) 0%, rgb(167, 6, 143) 100%);
+    color: white;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+.cancel-btn {
+    background: #f8f9fa;
+    color: #666;
+    border: 2px solid #e1e5e9;
+}
+
+.cancel-btn:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nikah-form-container {
+        padding: 10px;
+    }
+
+    .nikah-form {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .form-header h1 {
+        font-size: 2rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .submit-btn,
+    .cancel-btn {
+        width: 100%;
+    }
+
+    .upload-icon svg {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-header {
+
+        margin-top: 25px;
+    }
+
+    .form-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .upload-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .section-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .section-icon {
+        margin-right: 0;
+    }
+
+    .range-inputs {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .range-inputs span {
+        /* display: none; */
+        margin: 0px 10px;
+
+    }
+}
+
+/* Animation for form sections */
+.form-section {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+    background: linear-gradient(135deg, rgb(251, 176, 217) 0%, rgb(203, 17, 175) 100%);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    /* background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%); */
+    background: linear-gradient(135deg, rgb(242, 125, 189) 0%, rgb(167, 6, 143) 100%);
+
+}
+
+
+@media (max-width: 1024px) {
+    .nikah-form-container {
+        max-width: 900px;
+        padding: 15px;
+    }
+
+    .nikah-form {
+        padding: 30px;
+        border-radius: 15px;
+    }
+
+    .form-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .form-header p {
+        font-size: 1rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .form-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 11px 14px;
+        font-size: 0.95rem;
+    }
+
+    .file-upload {
+        padding: 25px;
+    }
+
+    .submit-btn,
+    .cancel-btn {
+        padding: 14px 35px;
+        font-size: 1rem;
+    }
+}
+
+/* 728px - Tablets */
+@media (max-width: 728px) {
+    .nikah-form-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .nikah-form {
+        padding: 25px 20px;
+        border-radius: 12px;
+    }
+
+    .form-header {
+        margin-bottom: 30px;
+    }
+
+    .form-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .form-header p {
+        font-size: 0.95rem;
+    }
+
+    .form-section {
+        margin-bottom: 40px;
+        padding-bottom: 25px;
+    }
+
+    .section-header {
+        margin-bottom: 25px;
+        padding-bottom: 12px;
+    }
+
+    .section-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .section-icon {
+        font-size: 1.6rem;
+        margin-right: 12px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .form-group.full-width {
+        grid-column: 1;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+        border-radius: 8px;
+    }
+
+    .form-group textarea {
+        min-height: 90px;
+    }
+
+    .file-upload {
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .upload-placeholder span {
+        font-size: 2.5rem;
+    }
+
+    .upload-placeholder p {
+        font-size: 0.9rem;
+    }
+
+    .range-inputs {
+        gap: 8px;
+    }
+
+    .form-actions {
+        flex-direction: row;
+        gap: 12px;
+        margin-top: 30px;
+        padding-top: 25px;
+    }
+
+    .submit-btn,
+    .cancel-btn {
+        padding: 12px 30px;
+        font-size: 0.95rem;
+        border-radius: 40px;
+        flex: 1;
+    }
+}
+
+/* 480px - Mobile Phones */
+@media (max-width: 480px) {
+    .nikah-form-container {
+        padding: 5px;
+    }
+
+    .nikah-form {
+        padding: 20px 15px;
+        border-radius: 10px;
+    }
+
+    .form-header {
+        margin-bottom: 25px;
+    }
+
+    .form-header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+    }
+
+    .form-header p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    .form-section {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+    }
+
+    .section-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+
+    .section-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .section-icon {
+        font-size: 1.4rem;
+        margin-right: 0;
+    }
+
+    .form-grid {
+        gap: 15px;
+    }
+
+    .form-group label {
+        font-size: 0.85rem;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+        border-radius: 6px;
+        border-width: 1.5px;
+    }
+
+    .form-group textarea {
+        min-height: 80px;
+        rows: 3;
+    }
+
+    .file-upload {
+        padding: 15px;
+        border-radius: 6px;
+    }
+
+    .upload-placeholder span {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+
+    .upload-placeholder p {
+        font-size: 0.8rem;
+    }
+
+    .range-inputs {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .range-inputs span {
+        /* display: none; */
+        margin: 0px 10px;
+
+    }
+
+    .range-inputs input {
+        width: 100%;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 25px;
+        padding-top: 20px;
+    }
+
+    .submit-btn,
+    .cancel-btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        border-radius: 35px;
+        width: 100%;
+    }
+
+    /* Adjust font sizes for better mobile readability */
+    body {
+        font-size: 14px;
+    }
+}
+
+/* Additional Mobile Optimization for very small screens */
+@media (max-width: 360px) {
+    .nikah-form {
+        padding: 15px 10px;
+    }
+
+    .form-header h1 {
+        font-size: 1.3rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.1rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 7px 8px;
+        font-size: 0.8rem;
+    }
+}
