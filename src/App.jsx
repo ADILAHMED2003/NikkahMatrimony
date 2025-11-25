@@ -9,7 +9,8 @@ import { showNotify, hideNotify } from "./redux/slices/notifySlice";
 
 export default function App() {
   const notify = useSelector((store) => store.notify);
-  console.log(notify);
+  console.log(notify, "Selector");
+
   const dispatch = useDispatch();
 
   const [check, setCheck] = useState({
