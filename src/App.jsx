@@ -7,9 +7,10 @@
 // import { useSelector, useDispatch } from "react-redux";
 // import { showNotify, hideNotify } from "./redux/slices/notifySlice";
 
-// export default function App() {
-//   const notify = useSelector((store) => store.notify);
-//   const dispatch = useDispatch();
+export default function App() {
+  const notify = useSelector((store) => store.notify);
+  console.log(notify);
+  const dispatch = useDispatch();
 
 //   const [check, setCheck] = useState({
 //     email: "",
